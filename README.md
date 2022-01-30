@@ -4,5 +4,5 @@ This is a frontend layout for an NFT card. The page can be viewed at the link be
 
 ## Link
 
-- Live Site URL: [Live site](https://oinsur.github.io/NFT-card__FEM/)
+- Live Site URL: [Live site](https://oinsur.github.io/NFT-card-git-practice/)
 
