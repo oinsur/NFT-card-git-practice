@@ -22,25 +22,45 @@ let dog = {
   name: "Shibe #5079",
   price: "0.09ETH",
   description: "Shiba Shelter is a collection of shibes on the Ethereum Blockchain",
-  nft: "https://lh3.googleusercontent.com/BLAw9VE-D5PyYfu7u_KbxBIrl_j5jI8I4UAt8H-qTGRZ4FBaFWNKb0HHP5Uk1shKvmC5LGpfi1ivK8G2BDuZOE30TVS8J8W-WngOyIE=w600&quot",
+  nft: "https://pbs.twimg.com/profile_images/1465294010910580739/032RShWU_400x400.jpg",
   backgroundColor: "#00FFFF",
   cardColor: "#FFC579",
   otherData: {
       owner: "Lance Toledo",
       daysLeft: "1 day left",
-      profileImg: "https://lh3.googleusercontent.com/a-/AOh14GiBv7fSEkk1Kr_3jpQfHTuEHh6V1ehFsg_sLNg0=s40-c&quot"
+      profileImg: "https://yt3.ggpht.com/ytc/AKedOLSSmstg20Polv3LH4GPl3Ccgt3NmKpN_VEwBLwjdg=s900-c-k-c0x00ffffff-no-rj"
   }
 }
 
 // name has already been declared as  a variable above, create variables to get all other elements first
 
-let body = document.getElementsByTagName("body");
+let body = document.getElementById("body");
 let NFT = document.getElementById("NFT");
 let text = document.getElementById("text");
-let card = document.getElementsByClassName("container");
-let price = document.getElementsByClassName("price");
-let days = document.getElementsByClassName("time");
-let owner = document.getElementsByTagName("span");
+let card = document.getElementById("container");
+let price = document.getElementById("price");
+let days = document.getElementById("time");
+let owner = document.getElementById("owner");
 let profilePic = document.getElementById("ProfilePic");
-let button = document.getElementsByTagName("button");
+let button = document.getElementById("btn");
+
+
+// console.log(dog.nft);
+button.addEventListener("click", function (){
+  
+  NFT.src = dog.nft;
+  body.style.backgroundColor = dog.backgroundColor;
+  card.style.backgroundColor = dog.cardColor;
+  titleName.innerText = dog.name;
+  text.innerText = dog.description;
+  text.style.color = "#FFFFFF";
+  price.innerText = dog.price;
+  price.style.color = "#FFFFFF";
+  days.innerText = dog.otherData.daysLeft;
+  days.style.color = "#FFFFFF";
+  owner.innerText = dog.otherData.owner;
+  profilePic.src = dog.otherData.profileImg;
+  }
+);
+
 
